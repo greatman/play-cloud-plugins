@@ -8,9 +8,9 @@ object ApplicationBuild extends Build {
 
 	val appDependencies = Seq(
 		// Add your project dependencies here
-		"net.databinder" %% "dispatch-http" % "0.8.7",
-		"net.databinder" %% "dispatch-mime" % "0.8.7",
-		"net.databinder" %% "dispatch-json" % "0.8.7"
+		"net.databinder" %% "dispatch-http" % "0.8.10",
+		"net.databinder" %% "dispatch-mime" % "0.8.10",
+		"net.databinder" %% "dispatch-json" % "0.8.10"
 	)
 
 	val main = play.Project(appName, appVersion, appDependencies).settings(

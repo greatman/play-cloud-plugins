@@ -7,15 +7,15 @@ case class SmsNotifierErrorResponse(val message: String) extends SmsNotifierResp
 case class SmsNotifierSuccessResponse(val messageId: String) extends SmsNotifierResponse
 
 trait SmsNotifierService {
-  def send(from: String, to: String, text: String): SmsNotifierResponse
+	def send(from: String, to: String, text: String): SmsNotifierResponse
 }
 
 trait SmsNotifierPlugin extends play.api.Plugin {
-  def smsNotifierService: SmsNotifierService
+	def smsNotifierService: SmsNotifierService
 }
 
 class MockSmsNotifierService extends SmsNotifierService {
-  def send(from: String, to: String, text: String): SmsNotifierResponse = {
-    SmsNotifierSuccessResponse("1")
-  }
+	def send(from: String, to: String, text: String): SmsNotifierResponse = {
+		SmsNotifierSuccessResponse("1")
+	}
 }
